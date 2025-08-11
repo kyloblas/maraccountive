@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maraccountive</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    html { scroll-behavior: smooth; }
+    :root {
+      --bg: #E8EDF2;           /* soft blue-grey for main background */
+      --bio-bg: #1E293B;       /* navy for bio area */
+      --card-bg: #FFFFFF;
+      --text: #111827;
+      --muted: #6B7280;
+      --btn: #D1D5DB;
+      --btn-hover: #374151;
+      --shadow: 0 1px 2px rgba(0,0,0,0.05);
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    nav {
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+    }
+    nav .container {
+      display: flex; gap: 12px; align-items: center; justify-content: center;
+      padding: 10px 16px;
+    }
+    nav a {
+      color: #64748B !important;
+      color: #1D4ED8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .hero-wrap {
+      background: linear-gradient(to bottom, var(--bio-bg) 0%, var(--bio-bg) 70%, var(--bg) 100%);
+      padding: 24px 0 16px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: white;
+    }
+    .hero-img img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: block;
+    }
+    .hero-content {
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .name {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    section { padding: 22px 0; }
+    h2 {
+      font-size: 1.4rem;
+      margin: 0 0 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .card .icon {
+      width: 40px; height: 40px; margin-right: 12px; float: left;
+    }
+    .button {
+      display: inline-block;
+      font-size: 0.9rem;
+      line-height: 1;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      color: var(--btn);
+      border: 1px solid var(--btn);
+      background: transparent;
+      text-decoration: none;
+      transition: all .15s ease-in-out;
+    }
+    .button:hover {
+      color: var(--btn-hover);
+      border-color: var(--btn-hover);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .contact a {
+      color: #64748B !important; color: #1D4ED8; text-decoration: none; }
+    @media (max-width: 640px) {
+      .hero { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+<div class="container">
+<a href="#services">Services</a>
+<a href="#examples">Examples</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+<div class="hero-wrap">
+<div class="container">
+<div class="hero">
+<div class="hero-img">
+<img alt="Margaret Carey" src="linkedin2.jpg"/>
+</div>
+<div class="hero-content">
+<div class="name">Margaret Carey · Finance, Systems &amp; Prototyping</div>
+<a class="button" href="https://www.youtube.com/watch?v=Tr4QH14pRKM" target="_blank">▶ Intro</a>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<section id="services">
+<h2>What I Offer</h2>
+<div class="grid">
+<div class="card">
+<strong>Financial Control &amp; Reporting</strong>
+<p>Multi-entity consolidation, compliance, and board-ready reporting that withstands scrutiny and enables confident decisions.</p>
+</div>
+<div class="card">
+<strong>Cash Flow &amp; Performance Management</strong>
+<p>Proactive forecasting, working capital optimisation, and cost control to maintain liquidity and drive sustainable growth.</p>
+</div>
+<div class="card">
+<strong>Strategic Planning &amp; Systems</strong>
+<p>Budgets, scenario modelling, and robust controls enhanced by automated processes and integrated systems — built in Python to enable practical Generative AI solutions and pave the way for Agentic AI.</p>
+</div>
+</div>
+</section>
+<section id="examples">
+<h2>Example Solutions</h2>
+<div class="grid">
+<div class="card">
+<img alt="Accrual Icon" class="icon" src="icon-accrual.jpg"/>
+<strong>Accrual Assistant</strong>
+<a class="button" href="https://youtu.be/uCMWtB7Pgus" style="margin-left:12px;" target="_blank">Demo</a>
+<p style="clear: both;">A Python + GenAI tool that flags missing invoices, caps accruals to forecast, and generates urgency-tagged summaries for month-end review — ideal for busy finance teams juggling deadlines.</p>
+</div>
+<div class="card">
+<img alt="Trial Balance Icon" class="icon" src="icon-trial-balance.jpg"/>
+<strong>Trial Balance Consolidator</strong>
+<a class="button" href="https://youtu.be/0hLqpt8fH_4" style="margin-left:12px;" target="_blank">Demo</a>
+<p style="clear: both;">A Pandas-powered tool to clean and merge Excel-based TB extracts from multiple subsidiaries — fast, clean, auditable, and ideal for group reporting or investor updates.</p>
+</div>
+<div class="card">
+<img alt="Dashboard Icon" class="icon" src="icon-roi.jpg"/>
+<strong>Marketing ROI Dashboard</strong>
+<a class="button" href="https://youtu.be/KwCpLcjpnAY" style="margin-left:12px;" target="_blank">Demo</a>
+<p style="clear: both;">Built in Streamlit to track campaign ROI, CAC, and support costs. Integrates with CRM data to highlight low-yield spend, empowering marketing and finance to align quickly.</p>
+</div>
+</div>
+</section>
+<section id="about">
+<h2>Finance Expertise + Innovation</h2>
+<ul>
+<li>📊 <strong>Accurate multi-entity accounts &amp; consolidated reporting</strong> — on time, every time, to keep operations smooth</li>
+<li>🎯 <strong>Budgeting, forecasting &amp; scenario planning</strong> — strategic insight that drives sustainable growth</li>
+<li>📈 <strong>Board-ready reporting packs with KPIs</strong> — combining financials &amp; operational metrics for confident decisions</li>
+<li>🤖 <strong>Process automation &amp; system integration in Python</strong> — connecting CRM, HR, and finance systems to eliminate manual work and errors, while building the backbone for real-world Generative AI solutions and making Agentic AI possible</li>
+</ul>
+</section>
+<section id="contact">
+<h2>What’s Next?</h2>
+<div class="contact-grid">
+<div class="contact">
+          📧 <a href="mailto:mcareycv@gmail.com">mcareycv@gmail.com</a><br/>
+          📅 <a href="https://calendly.com/mcareycv/30min" target="_blank">Book a 30-min chat</a>
+</div>
+<div class="contact">
+          📄 <a href="cv.pdf" target="_blank">Download CV (PDF)</a><br/>
+          🔗 <a href="https://www.linkedin.com/in/margaret-carey" target="_blank">View LinkedIn Profile</a>
+</div>
+</div>
+</section>
+</div>
+</body>
+</html>
